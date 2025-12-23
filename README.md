@@ -4,7 +4,8 @@
 
 - **[README.md](README.md)** – Setup instructions, how to run the backend and frontend, and repository overview  
 - **[design-and-evaluation.md](design-and-evaluation.md)** – Design decisions, RAG architecture justification, evaluation methodology, and results  
-- **[ai-tooling.md](ai-tooling.md)** – Disclosure of how AI tools (ChatGPT) were used during development  
+- **[ai-tooling.md](ai-tooling.md)** – Disclosure of how AI tools (ChatGPT) were used during development
+- **[deployed.md](deployed.md)** – Deployment status and access information
 
 ---
 
@@ -241,6 +242,13 @@ See **[design-and-evaluation.md](design-and-evaluation.md)** for detailed design
 - Relying on prompt-only fixes for citation ordering and formatting edge cases
 
 See **[ai-tooling.md](ai-tooling.md)** for detailed disclosure of AI usage and workflow.
+
+---
+
+## Deployment Considerations
+
+The application is compatible with free-tier deployment platforms such as:
+- Render
 
 ---
 
