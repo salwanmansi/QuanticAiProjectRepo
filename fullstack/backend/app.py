@@ -16,8 +16,17 @@ log = logging.getLogger(__name__)
 from config import Config
 cfg = Config()
 
+# ---------- serve React build (production)
+BASE_DIR = Path(__file__).resolve().parent
+FRONTEND_BUILD_DIR = (BASE_DIR / ".." / "frontend" / "build").resolve()
+FRONTEND_STATIC_DIR = (FRONTEND_BUILD_DIR / "static").resolve()
+
 # ---------- app
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    static_folder=str(FRONTEND_STATIC_DIR),   # serve CRA assets from build/static
+    static_url_path="/static",
+)
 CORS(app, resources={r"/*": {"origins": cfg.ALLOWED_ORIGINS}})
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
 
