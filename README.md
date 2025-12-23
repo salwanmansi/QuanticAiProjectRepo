@@ -6,6 +6,8 @@
 - **[design-and-evaluation.md](design-and-evaluation.md)** – Design decisions, RAG architecture justification, evaluation methodology, and results  
 - **[ai-tooling.md](ai-tooling.md)** – Disclosure of how AI tools (ChatGPT) were used during development  
 
+---
+
 ## Overview
 
 Quantic – AI is a full‑stack Retrieval‑Augmented Generation (RAG) application developed as part of the Quantic University MS in Software Engineering program. The project demonstrates an end‑to‑end, production‑oriented AI system including document ingestion, vector storage, semantic retrieval, citation‑grounded responses, evaluation tooling, and a web‑based chat interface.
@@ -256,5 +258,4 @@ Educational use only.
 
 ## Author
 
-Salwan Mansi
-Quantic University – MS Software Engineering
+Salwan Mansi - Quantic University – MS Software Engineering
