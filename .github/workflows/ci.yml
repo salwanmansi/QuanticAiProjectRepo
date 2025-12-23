@@ -75,3 +75,32 @@ jobs:
             exit 1
           fi
           curl -fsS -X POST "$RENDER_HOOK"
+
+      - name: Wait for service to become healthy
+        env:
+          BASE: ${{ secrets.APP_BASE_URL }}
+        run: |
+          if [ -z "$BASE" ]; then
+            echo "Missing APP_BASE_URL secret"
+            exit 1
+          fi
+
+          echo "Pinging $BASE/health until it returns 200..."
+          for i in {1..60}; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$BASE/health" || true)
+            if [ "$code" = "200" ]; then
+              echo "Health check OK."
+              exit 0
+            fi
+            echo "Attempt $i: /health returned $code, retrying..."
+            sleep 5
+          done
+
+          echo "Service did not become healthy in time."
+          exit 1
+
+      - name: Post-deploy version check
+        env:
+          BASE: ${{ secrets.APP_BASE_URL }}
+        run: |
+          curl -fsS "$BASE/api/version"
