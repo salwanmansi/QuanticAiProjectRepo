@@ -25,11 +25,6 @@ app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
 BASE_DIR = Path(__file__).resolve().parent
 FRONTEND_BUILD_DIR = (BASE_DIR / ".." / "frontend" / "build").resolve()
 
-# ---------- api endpoint get /
-@app.get("/")
-def root():
-    return {"ok": True, "service": "backend", "hint": "Try /health or /api routes"}, 200
-
 # ---------- api endpoint get /health
 @app.get("/health")
 def health():
