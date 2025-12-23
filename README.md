@@ -27,6 +27,11 @@ The system is intentionally designed to be **reproducible**, **deterministic**, 
 4. A constrained RAG prompt generates citation‑grounded answers
 5. Responses are evaluated using automated metrics
 
+**Deployment Architecture:**
+
+For production deployment on Render, the backend Flask service also serves the compiled React frontend.  
+The React application is built during the Render build phase, and its static assets (`build/static`) are served directly by Flask, enabling a single-service deployment under one URL.
+
 **Core principles:**
 
 * Deterministic runs via fixed random seeds

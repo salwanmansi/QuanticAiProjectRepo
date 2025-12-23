@@ -30,6 +30,9 @@ app = Flask(
 CORS(app, resources={r"/*": {"origins": cfg.ALLOWED_ORIGINS}})
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1)
 
+# OPTIONAL: cache static assets for 1 year (safe for hashed CRA builds)
+app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 31536000
+
 # ---------- api endpoint get /health
 @app.get("/health")
 def health():
