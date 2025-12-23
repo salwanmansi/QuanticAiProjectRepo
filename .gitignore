@@ -1,141 +1,17 @@
-###############################################################################
-# GLOBAL PYTHON IGNORE
-###############################################################################
-
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environments
+*.pyc
 .venv/
-venv/
-env/
-
-# Python metadata
-*.egg-info/
-.eggs/
-*.pkl
-*.log
-
-# pytest / coverage
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-.pytest_cache/
-
-###############################################################################
-# GLOBAL NODE IGNORE (frontend)
-###############################################################################
-
-# Node modules
-node_modules/
-
-# npm / yarn logs
-npm-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# React / CRA build artifacts
-build/
-dist/
-.next/
-out/
-.cache/
-
-# Lock files (optional)
-yarn.lock
-pnpm-lock.yaml
-
-###############################################################################
-# ENVIRONMENT / SECRETS
-###############################################################################
-
-# .env files
 .env
-.env.local
-.env.development
-.env.production
-.env.test
 
-# dotenv in backend and frontend
-backend/.env
-frontend/.env
+# Node
+node_modules/
+build/
 
-###############################################################################
-# OS / EDITOR / MISC
-###############################################################################
-
-# macOS
+# OS
 .DS_Store
 
-# Windows
-Thumbs.db
-
-# IDEs / Editors
-.vscode/
-.idea/
-*.swp
-
-###############################################################################
-# VECTOR DB (CHROMA) — database & persistent directories
-###############################################################################
-
-# Chroma persistent directories (backend)
-chromadb/
-database/chromadb/
-fullstack/database/chromadb/
-
-# Chroma SQLite / DuckDB files
-*.sqlite3
-*.sqlite
-*.db
-*.duckdb
-*.bin
-*.lock
-
-###############################################################################
-# DOCUMENTS & PDF INGESTION SOURCES
-###############################################################################
-
-# Context data (if you don’t want to commit PDFs)
-context_data/*
-!context_data/.gitkeep
-
-# Uncomment this if you DO want to commit PDFs:
-# !context_data/*.pdf
-
-###############################################################################
-# BACKEND + API SERVER ARTIFACTS
-###############################################################################
-
-# Gunicorn logs or runtime files
-*.pid
-
-###############################################################################
-# FRONTEND STATIC OUTPUT
-###############################################################################
-
-frontend/build/
-frontend/dist/
-frontend/out/
-frontend/.cache/
-
-###############################################################################
-# OPTIONAL LOG AND TEMP IGNORE
-###############################################################################
-
-tmp/
-temp/
-logs/
-*.tmp
-*.bak
-*.old
-
-###############################################################################
-# SUBMISSION PDF
-###############################################################################
+# Logs
+*.log
 
 submissionpdf.md
