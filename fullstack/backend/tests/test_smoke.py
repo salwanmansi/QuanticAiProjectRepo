@@ -13,6 +13,7 @@ DEFAULT_ENV = {
     "MIN_RELEVANCE": "0.25",
     "MAX_ANSWER_CHARS": "2000",
     "MAX_PER_SOURCE": "2",
+    "OPENROUTER_API_KEY": "ci_dummy_key",
     "OPENAI_API_BASE": "https://openrouter.ai/api/v1",
     "LLM_MODEL_NAME": "google/gemma-3-27b-it:free",
     "LLM_TEMPERATURE": "0",
@@ -24,7 +25,7 @@ DEFAULT_ENV = {
         "I can only answer questions about the documents in this policy corpus. "
         "Please ask about company policies and procedures contained in the uploaded documents."
     ),
-    "ALLOWED_ORIGINS": "http://localhost:3000",
+    "ALLOWED_ORIGINS": "*",
     "PORT": "8000",
 }
 

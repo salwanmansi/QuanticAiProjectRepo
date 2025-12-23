@@ -7,7 +7,7 @@ on:
 
 jobs:
   backend:
-    name: Backend - install + smoke check
+    name: Backend - install + smoke test
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -29,15 +29,11 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      # Explicit "run/import" check per rubric
-      - name: Backend import check
-        run: |
-          python -c "import app"
+      - name: Compile check
+        run: python -m compileall -q .
 
-      # Optional: pytest if present
       - name: Pytest smoke tests
-        run: |
-          pytest -q || echo "No tests found, skipping"
+        run: pytest -q
 
   frontend:
     name: Frontend - install + build
