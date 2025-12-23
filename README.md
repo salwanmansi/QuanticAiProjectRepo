@@ -1,5 +1,11 @@
 # Quantic – AI
 
+## Project Documentation
+
+- **[README.md](README.md)** – Setup instructions, how to run the backend and frontend, and repository overview  
+- **[design-and-evaluation.md](design-and-evaluation.md)** – Design decisions, RAG architecture justification, evaluation methodology, and results  
+- **[ai-tooling.md](ai-tooling.md)** – Disclosure of how AI tools (ChatGPT) were used during development  
+
 ## Overview
 
 Quantic – AI is a full‑stack Retrieval‑Augmented Generation (RAG) application developed as part of the Quantic University MS in Software Engineering program. The project demonstrates an end‑to‑end, production‑oriented AI system including document ingestion, vector storage, semantic retrieval, citation‑grounded responses, evaluation tooling, and a web‑based chat interface.
@@ -39,8 +45,10 @@ QuanticAiProject/
 │   │   └── chromadb/               Persisted Chroma vector database
 │   ├── eval/                       Evaluation files and script
 │   ├── frontend/                   React chat UI built with Create React App
-├── .gitignore                      
-├── DESIGN.md                       Briefly justify design choices
+├── .gitignore                      What to ignore for github repo
+├── ai-tooling.md                   How AI tooling was used to help creating the project
+├── deployed.md                     link to the deployed version of the app                     
+├── design-and-evaluation.md        Briefly justify design choices
 └── README.md                       Project‑level documentation
 ```
 
@@ -208,7 +216,7 @@ Minimal automation is intentional and sufficient for the assignment scope.
 * **Prompting:** Strict context‑only RAG prompt with mandatory citations
 * **Vector store:** ChromaDB for transparency and local persistence
 
-See [DESIGN.md](DESIGN.md) for a detailed explanation of architecture and design decisions.
+See **[design-and-evaluation.md](design-and-evaluation.md)** for detailed design decisions and evaluation results.
 
 ---
 
