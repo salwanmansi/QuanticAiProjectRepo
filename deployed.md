@@ -11,7 +11,7 @@ The deployed instance provides access to the complete RAG application, including
 ## Public Deployment URL
 
 **Application URL:**  
-👉 _[INSERT RENDER DEPLOYMENT URL HERE]_
+👉 https://quanticaiprojectsm95.onrender.com
 
 ---
 

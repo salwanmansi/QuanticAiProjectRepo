@@ -86,11 +86,11 @@ QuanticAiProject/
 
 * GitHub Actions
 * Minimal build & run verification
-* Optional Render deployment hook
+* Render deployment hook
 
 ---
 
-## Backend Environment Configuration
+## Backend Environment Configuration (Local Development)
 
 Create a `.env` file in the backend directory:
 
@@ -123,13 +123,25 @@ PORT=8000
 
 ---
 
-## Frontend Environment Configuration
+## Frontend Environment Configuration (Local Development)
 
 Create a `.env` file in the frontend directory:
 
 ```
 REACT_APP_API_BASE=http://localhost:8000
 ```
+
+---
+
+### Production (Render)
+
+On Render, set environment variables in the Render dashboard (do not upload a `.env` file).
+
+- `OPENROUTER_API_KEY=...` (Render secret)
+- `OPENROUTER_SITE_URL=https://<your-render-app>.onrender.com`
+- `ALLOWED_ORIGINS=https://<your-render-app>.onrender.com` (or `*` if permissive)
+
+> **Do not set `PORT` manually on Render** — Render provides the `$PORT` environment variable automatically.
 
 ---
 
