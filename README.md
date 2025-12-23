@@ -220,6 +220,28 @@ See **[design-and-evaluation.md](design-and-evaluation.md)** for detailed design
 
 ---
 
+## AI Tooling (Brief)
+
+1. AI assistance: ChatGPT used for iterative code generation, debugging, and documentation  
+2. Document corpus: AI-generated synthetic policy documents refined through multiple prompt iterations  
+3. Development workflow: AI used to suggest fixes one issue at a time, with manual review and testing  
+4. Debugging: AI assisted in diagnosing backend, frontend, and RAG pipeline issues using logs and runtime output  
+5. Evaluation support: AI used to generate and refine golden Q&A sets and interpret evaluation results  
+
+**What worked well**
+- Incremental prompts focused on a single issue at a time
+- Supplying actual runtime errors, logs, and output for debugging
+- Using AI explanations to understand code paths before making final edits
+
+**What did not work well**
+- Requesting large, end-to-end fixes in a single prompt
+- Allowing full file rewrites instead of targeted edits
+- Relying on prompt-only fixes for citation ordering and formatting edge cases
+
+See **[ai-tooling.md](ai-tooling.md)** for detailed disclosure of AI usage and workflow.
+
+---
+
 ## Academic Integrity Statement
 
 All metrics, evaluation methods, and system behaviors are explicitly disclosed. No hidden heuristics or undisclosed scoring mechanisms are used. The project is designed to be inspectable, reproducible, and auditable.
