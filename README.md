@@ -245,10 +245,11 @@ See **[ai-tooling.md](ai-tooling.md)** for detailed disclosure of AI usage and w
 
 ---
 
-## Deployment Considerations
+## Deployment (Brief)
 
-The application is compatible with free-tier deployment platforms such as:
-- Render
+The application is publicly deployed using **Render** and provides access to the full RAG workflow, including the web chat interface and backend APIs.
+
+- **Live application:** See **[deployed.md](deployed.md)** for the public deployment URL and deployment details
 
 ---
 
