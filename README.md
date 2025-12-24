@@ -1,6 +1,6 @@
 # Quantic – AI
 
-## Project Documentation
+## Project Documentation Tree
 
 - **[README.md](README.md)** – Setup instructions, how to run the backend and frontend, and repository overview  
 - **[design-and-evaluation.md](design-and-evaluation.md)** – Design decisions, RAG architecture justification, evaluation methodology, and results  
